@@ -1,0 +1,9 @@
+<div class="seat-row" *ngFor="let row of seats | groupByRow">
+  <button 
+    *ngFor="let seat of row" 
+    [class.booked]="seat.isBooked"
+    (click)="bookSeat(seat.id)"
+  >
+    {{ seat.id }}
+  </button>
+</div>
